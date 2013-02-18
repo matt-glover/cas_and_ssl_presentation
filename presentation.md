@@ -53,26 +53,26 @@ TLS/SSL
 
 Where is TLS Used?
 ==================
-- HTTP: HTTPS
-- FTP: FTPS (explicit) over standard FTP via "AUTH TLS"
-    - This is not the same as SFTP
-- SMTP: Using STARTTLS
-- NNTP: NNTPS to provide Network News Transfer Protocol over TLS
-- XMPP: Used to encrypt the communication channel. SASL is used for authentication
-- VPN: OpenVPN uses TLS for key exchange
-- SIP: Encrypted on port 5061
+- HTTP - HTTPS
+- FTP - FTPS (explicit) over standard FTP via "AUTH TLS"
+    - This is *not* the same as SFTP
+- SMTP - Using STARTTLS
+- NNTP - NNTPS to provide Network News Transfer Protocol over TLS
+- XMPP - Used to encrypt the communication channel. SASL is used for authentication
+- VPN - OpenVPN uses TLS for key exchange
+- SIP - Encrypted on port 5061
 
 Fscking TLS, how does it work?
 ==============================
-![TLS Handshake Negotiation](images/tls_handshake1.png "TLS Handshake Negotiation")
+<img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
 
 TLS (Part II)
 =============
-![TLS Handshake Post-Negotiation](images/tls_handshake2.png "TLS Handshake Post-Negotiation")
+<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
 
 TLS Handshake in Review
 =======================
-![Yo dawg I heard you like encryption](images/handshake_review.png "Yo dawg I heard you like encryption.")
+<img src="images/handshake_review.png" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" title="Yo dawg I heard you like encryption" alt="Yo dawg I heard you like encryption" />
 
 Demo
 ====
