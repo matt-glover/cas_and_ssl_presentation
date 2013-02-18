@@ -3,12 +3,16 @@ footer:
 subfooter:
 title: Certificate Authorities & SSL
 author: Matt Glover
+
 Certificate Authorities & SSL
 =============================
+---
 
-The Good,
-The Bad and
-The Break-ins
+### <center>The Good,</center>
+
+### <center>The Bad and</center>
+
+### <center>The Break-ins</center>
 
 What Will Be Covered
 ====================
@@ -20,13 +24,14 @@ What Will Be Covered
 
 Acronym and Definition Soup
 ===========================
-- TLS: Transport Layer Security
-- SSL: Secure Sockets Layer
-- PKI: Public Key Infrastructure
-- CA: Certificate Authority
-- D-H: Diffie-Hellman key exchange
-- MitM: Man-in-the-middle attack
-- WoT: Web of Trust
+
+- TLS - Transport Layer Security
+- SSL - Secure Sockets Layer
+- PKI - Public Key Infrastructure
+- CA - Certificate Authority
+- D-H - Diffie-Hellman key exchange
+- MitM - Man-in-the-middle attack
+- WoT - Web of Trust
 
 TLS/SSL
 =======
@@ -50,10 +55,10 @@ Where is TLS Used?
 ==================
 - HTTP: HTTPS
 - FTP: FTPS (explicit) over standard FTP via "AUTH TLS"
-    - This is not the same as SFTP (file transfer via SSH)
-- SMTP: Using STARTTLS enabling a plain text connection to upgrade to an encrypted connection on the same port
-- NNTP: Network News Transfer Protocol as NNTPS (port 563)
-- XMPP: Used to encrypt the communication channel. Simple Authentication and Security Layer (SASL) is used for authentication
+    - This is not the same as SFTP
+- SMTP: Using STARTTLS
+- NNTP: NNTPS to provide Network News Transfer Protocol over TLS
+- XMPP: Used to encrypt the communication channel. SASL is used for authentication
 - VPN: OpenVPN uses TLS for key exchange
 - SIP: Encrypted on port 5061
 

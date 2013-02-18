@@ -1,22 +1,31 @@
-TLS Transport Layer Security - A protocol to provide communications
+- TLS Transport Layer Security - A protocol to provide communications
    security over the Internet. It allows client/server applications to
   communicate in a way that is designed to prevent eavesdropping,
  tampering, or message forgery.
-SSL Secure Sockets Layer - See above. This was the protocol as originally
+- SSL Secure Sockets Layer - See above. This was the protocol as originally
    defined at Netscape and went through several revisions before being
   replaced by TLS based on SSL 3.0.
-PKI Public Key Infrastructure - A set of hardware, software, people, policies,
+- PKI Public Key Infrastructure - A set of hardware, software, people, policies,
    and procedures needed to create, manage, distribute, use, store, and
   revoke digital certificates
-CA Certificate Authority - An entity that issues digital certificates
-D-H Diffie-Hellman key exchange - A method for two parties that have no
+- CA Certificate Authority - An entity that issues digital certificates
+- D-H Diffie-Hellman key exchange - A method for two parties that have no
    prior knowledge of each other to jointly establish a shared secret key
   over an insecure communication channel
-MitM Man-in-the-middle attack - A form of active eavesdropping where the
+- MitM Man-in-the-middle attack - A form of active eavesdropping where the
     attacker makes independent connections with the victims and relays
    messages between them. Victims believe that they are securely talking
   directly to each other but the channel is controlled by the attacker.
-WoT Web of Trust - A means for systems to establish the authenticity of the
+- WoT Web of Trust - A means for systems to establish the authenticity of the
    binding between a public key and its owner based on a series of trust
   assertions. An alternative to the more hierarchical PKI/CA approach.
+
+
+- FTP: FTPS (explicit) over standard FTP via "AUTH TLS"
+    - This is not the same as SFTP (file transfer via SSH)
+- SMTP: Using STARTTLS enabling a plain text connection to upgrade to an encrypted connection on the same port
+- NNTP: Network News Transfer Protocol as NNTPS (port 563)
+- XMPP: Used to encrypt the communication channel. Simple Authentication and Security Layer (SASL) is used for authentication
+- VPN: OpenVPN uses TLS for key exchange
+- SIP: Encrypted on port 5061
 
