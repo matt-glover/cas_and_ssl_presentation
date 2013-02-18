@@ -166,12 +166,16 @@ Stolen from OWASP: [http://goo.gl/GjkGI](http://goo.gl/GjkGI)
 More Examples
 =============
 - Mixed content example site: [https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm](https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm)
-- Setting up Jetty for JSSE: [http://docs.codehaus.org/display/JETTY/How+to+configure+SSL](http://docs.codehaus.org/display/JETTY/How+to+configure+SSL)
-    - Let Spring force HTTPS
-    - `<intercept-url pattern="/**" requires-channel="https" />`
-- Rails: [https://github.com/josh/rack-ssl](https://github.com/josh/rack-ssl), or rack-ssl-enforcer
+- Rails >= 3.1 - set `config.force_ssl=true` in your environment configuration
+    - Forces all connections to use HTTPS
+    - Any cookies marked "Secure" will be transmitted over HTTPS only
     - Autoredirect to HTTPS, "Secure" cookies, and HSTS
-    - Rails >=3.1 set `config.force_ssl=true` in your environment configuration
+- Optionally set up HSTS
+    - Only set this for HTTPS connections
+    - Nginx example:
+<% code do %>
+add_header Strict-Transport-Security max-age=31536000;
+<% end %>
 
 Bad Press for CAs and TLS 2011-2012
 ===================================
