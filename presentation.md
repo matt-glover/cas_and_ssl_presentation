@@ -51,9 +51,11 @@ Where is TLS Used?
 
 Fscking TLS, how does it work?
 ==============================
+![TLS Handshake Negotiation](images/tls_handshake1.png "TLS Handshake Negotiation")
 
 TLS (Part II)
 =============
+![TLS Handshake Post-Negotiation](images/tls_handshake2.png "TLS Handshake Post-Negotiation")
 
 TLS Handshake in Review
 =======================
@@ -82,20 +84,22 @@ RSA - Show (some of) Your Work!
 ===============================
 - Two large primes (p and q) are generated and stored privately
 - The product of the primes, n, is the modulus for the public and private keys
-- Privately calculate: `φ(n) = (p – 1)(q – 1)`, where `φ` is Euler's totient function. [http://en.wikipedia.org/wiki/Euler%27s_totient_function]
-- Determine e where: 1 < e < φ(n) and gcd(e,φ(n)) = 1
-- Publish e as the public key exponent
-- Determine d where: d = e–1 mod φ(n)
-- Encrypt data with the public key using: c = me (mod n)
-    - m is the padded message as an integer
-    - c is the encrypted text
-- Decrypt the data with the private key using: m = cd (mod n)
+- Privately calculate: `φ(n) = (p – 1)(q – 1)`, where `φ` is [Euler's totient function](http://en.wikipedia.org/wiki/Euler%27s_totient_function).
+- Determine `e` where: `1 < e < φ(n)` and `gcd(e,φ(n)) = 1`
+- Publish `e` as the public key exponent
+- Determine `d` where: `d = e–1 mod φ(n)`
+- Encrypt data with the public key using: `c = me (mod n)`
+    - `m` is the padded message as an integer
+    - `c` is the encrypted text
+- Decrypt the data with the private key using: `m = cd (mod n)`
 
 D-H Key Exchange
 ================
+![Diffie-Hellman Key Exchange 1 of 2](images/d-h1.png "Diffie-Hellman Key Exchange")
 
 D-H Key Exchange (Part II)
 ==========================
+![Diffie-Hellman Key Exchange 2 of 2](images/d-h2.png "Diffie-Hellman Key Details")
 
 PKI, CAs, X.509, and Certificates
 =================================
@@ -122,20 +126,20 @@ assurance that the user is who they claim
 Wrong Certificate Example
 =========================
 Dave wants to log on to his favorite Twilight(TM) fan site:
-http://www.fairiesvampires.com/main/authorization/signIn
+[http://www.fairiesvampires.com/main/authorization/signIn](http://www.fairiesvampires.com/main/authorization/signIn)
 
 But he does not want his credentials to be transmitted in the
 clear otherwise someone might log in as him and claim he does
 not love sensitive caring vampires!
 
 So he changes the URL to https!
-https://www.fairiesvampires.com/main/authorization/signIn
+[https://www.fairiesvampires.com/main/authorization/signIn](https://www.fairiesvampires.com/main/authorization/signIn)
 
 But things do not go as expected. What should Dave do!?
 
 Brief Detour - HTTPS Best Practices
 ===================================
-Stolen from OWASP: http://goo.gl/GjkGI
+Stolen from OWASP: [http://goo.gl/GjkGI](http://goo.gl/GjkGI)
 
 - Use TLS for all login and authenticated pages
 - Use TLS to transmit sensitive data
@@ -148,24 +152,24 @@ Stolen from OWASP: http://goo.gl/GjkGI
 
 More Examples
 =============
-- Mixed content example site: https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm
-- Setting up Jetty for JSSE: http://docs.codehaus.org/display/JETTY/How+to+configure+SSL
+- Mixed content example site: [https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm](https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm)
+- Setting up Jetty for JSSE: [http://docs.codehaus.org/display/JETTY/How+to+configure+SSL](http://docs.codehaus.org/display/JETTY/How+to+configure+SSL)
     - Let Spring force HTTPS
     - `<intercept-url pattern="/**" requires-channel="https" />`
-- Rails: https://github.com/josh/rack-ssl, or rack-ssl-enforcer
+- Rails: [https://github.com/josh/rack-ssl](https://github.com/josh/rack-ssl), or rack-ssl-enforcer
     - Autoredirect to HTTPS, "Secure" cookies, and HSTS
-    - Rails >=3.1 set config.force_ssl=true in your environment configuration
+    - Rails >=3.1 set `config.force_ssl=true` in your environment configuration
 
 Bad Press for CAs and TLS 2011-2012
 ===================================
-- Comodo affiliate issues fraudulent certs for domains like mail.google.com, login.yahoo.com, addons.mozilla.org
+- Comodo affiliate issues fraudulent certs for domains like `mail.google.com`, `login.yahoo.com`, `addons.mozilla.org`
 - CA DigiNotar compromised subjecting users to MitM via fraudulent certs
 - B.E.A.S.T. decrypts part of PayPal encrypted data stream using a chosen plain-text attack against TLS 1.0 because it uses a predictable IV in CBC mode
 - Chrome 14/15 allowed certain types of redirects to display a valid HTTPS URL with content from a different site
 
 Bad press for CAs and TLS 2012-2013
 ===================================
-http://www.isg.rhul.ac.uk/tls/
+[http://www.isg.rhul.ac.uk/tls/](http://www.isg.rhul.ac.uk/tls/)
 
 Weaknesses (Real and Perceived)
 ===============================
@@ -178,20 +182,23 @@ Weaknesses (Real and Perceived)
 
 Proposed Solutions and Mitigations
 ==================================
-SSL Observatory: https://www.eff.org/observatory
-Use DNSSEC or HTTPS headers for authenticity check
-Updating CA operational guidelines and standards
-Sovereign Keys: https://www.eff.org/sovereign-keys
-Google researchers suggest public append log, proofs, and
-client check: http://goo.gl/8yKLR
-Convergence: http://convergence.io/
-Monkeysphere: http://web.monkeysphere.info/
+- SSL Observatory: [https://www.eff.org/observatory](https://www.eff.org/observatory)
+- Use DNSSEC or HTTPS headers for authenticity check
+- Updating CA operational guidelines and standards
+- Sovereign Keys: [https://www.eff.org/sovereign-keys](https://www.eff.org/sovereign-keys)
+- Google researchers suggest public append log, proofs, and client check: [http://goo.gl/8yKLR](http://goo.gl/8yKLR)
+- Convergence: [http://convergence.io/](http://convergence.io/)
+- Monkeysphere: [http://web.monkeysphere.info/](http://web.monkeysphere.info/)
 
 Questions?
 ==========
 Name: Matthew Glover
+
 Email: matt.glover@opower.com
+
 Comment: OPOWER email key
+
 Type: Public PGP Key
+
 Key ID: 6AC01436
 
