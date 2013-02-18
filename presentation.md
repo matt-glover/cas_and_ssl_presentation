@@ -177,16 +177,16 @@ More Examples
 add_header Strict-Transport-Security max-age=31536000;
 <% end %>
 
-Bad Press for CAs and TLS 2011-2012
+Bad Press for CAs and TLS 2011-2013
 ===================================
-- Comodo affiliate issues fraudulent certs for domains like `mail.google.com`, `login.yahoo.com`, `addons.mozilla.org`
-- CA DigiNotar compromised subjecting users to MitM via fraudulent certs
-- B.E.A.S.T. decrypts part of PayPal encrypted data stream using a chosen plain-text attack against TLS 1.0 because it uses a predictable IV in CBC mode
+- [Comodo affiliate](http://blogs.comodo.com/it-security/data-security/the-recent-ra-compromise/) issues fraudulent certs for domains like `mail.google.com`, `login.yahoo.com`, `addons.mozilla.org`
+- [CA DigiNotar](http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html) compromised subjecting users to MitM via fraudulent certs
+- [B.E.A.S.T.](https://threatpost.com/en_us/blogs/new-attack-breaks-confidentiality-model-ssl-allows-theft-encrypted-cookies-091911) decrypts part of PayPal encrypted data stream using a chosen plain-text attack against TLS 1.0 because it uses a predictable IV in CBC mode
+- [CRIME](https://threatpost.com/en_us/blogs/crime-attack-uses-compression-ratio-tls-requests-side-channel-hijack-secure-sessions-091312) uses an information leak in the compression ratio of TLS requests as a side channel to enable decryption of requests from client to server
 - Chrome 14/15 allowed certain types of redirects to display a valid HTTPS URL with content from a different site
-
-Bad press for CAs and TLS 2012-2013
-===================================
-[http://www.isg.rhul.ac.uk/tls/](http://www.isg.rhul.ac.uk/tls/)
+- [Adobe code signing certificates](https://blogs.adobe.com/asset/2012/09/inappropriate-use-of-adobe-code-signing-certificate.html) stolen and used to sign malicious software
+- [Bit9 code signing certificates](https://blog.bit9.com/2013/02/08/bit9-and-our-customers-security/) were stolen allowing malware to be signed as legitimate software
+- [Lucky Thirteen TLS and DTLS MitM](http://www.isg.rhul.ac.uk/tls/) discovered via an advanced padding oracle attack against HMAC-SHA1 MACs
 
 Weaknesses (Real and Perceived)
 ===============================
