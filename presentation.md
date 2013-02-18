@@ -95,24 +95,24 @@ message.
 
 RSA - Show (some of) Your Work!
 ===============================
-- Two large primes (p and q) are generated and stored privately
-- The product of the primes, n, is the modulus for the public and private keys
+- Two large primes (`p` and `q`) are generated and stored privately
+- The product of the primes, `n`, is the modulus for the public and private keys
 - Privately calculate: `φ(n) = (p – 1)(q – 1)`, where `φ` is [Euler's totient function](http://en.wikipedia.org/wiki/Euler%27s_totient_function).
 - Determine `e` where: `1 < e < φ(n)` and `gcd(e,φ(n)) = 1`
 - Publish `e` as the public key exponent
 - Determine `d` where: `d = e–1 mod φ(n)`
-- Encrypt data with the public key using: `c = me (mod n)`
+- Encrypt data with the public key using: `c = m·e (mod n)`
     - `m` is the padded message as an integer
     - `c` is the encrypted text
-- Decrypt the data with the private key using: `m = cd (mod n)`
+- Decrypt the data with the private key using: `m = c·d (mod n)`
 
 D-H Key Exchange
 ================
-![Diffie-Hellman Key Exchange 1 of 2](images/d-h1.png "Diffie-Hellman Key Exchange")
+<img src="images/d-h1.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 1 of 2" alt="Diffie-Hellman Key Exchange" />
 
 D-H Key Exchange (Part II)
 ==========================
-![Diffie-Hellman Key Exchange 2 of 2](images/d-h2.png "Diffie-Hellman Key Details")
+<img src="images/d-h2.png" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" title="Diffie-Hellman Key Exchange 2 of 2" alt="Diffie-Hellman Key Details" />
 
 PKI, CAs, X.509, and Certificates
 =================================
