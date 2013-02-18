@@ -1,3 +1,8 @@
+gradient: radial-off-center #ff5c5c #cecece
+footer:
+subfooter:
+title: Certificate Authorities & SSL
+author: Matt Glover
 Certificate Authorities & SSL
 =============================
 
@@ -25,18 +30,21 @@ Acronym and Definition Soup
 
 TLS/SSL
 =======
-
+<% left do %>
 ### What It Is
 - A cryptographic protocol
 - Protection for data in transit
 - A key exchange protocol
 - Eavesdropping and message tampering prevention
+<% end %>
 
+<% right do %>
 ### What It Is **NOT**
 - An encryption algorithm
 - Protection for data at rest
 - Strictly dependent on certificate authorities
 - The same as SSH
+<% end %>
 
 Where is TLS Used?
 ==================
