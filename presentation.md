@@ -200,13 +200,11 @@ Proposed Solutions and Mitigations
 
 Questions?
 ==========
-Name: Matthew Glover
+Name: Matt Glover
 
-Email: matt.glover@opower.com
-
-Comment: OPOWER email key
+Email: matt.glover@mandiant.com
 
 Type: Public PGP Key
 
-Key ID: 6AC01436
+Key ID: 54C013B4
 
