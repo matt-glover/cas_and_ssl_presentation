@@ -64,11 +64,11 @@ Where is TLS Used?
 
 Fscking TLS, how does it work?
 ==============================
-<img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
+<img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
 
 TLS (Part II)
 =============
-<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
+<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height:180%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
 
 TLS Handshake in Review
 =======================
@@ -112,7 +112,7 @@ D-H Key Exchange
 
 D-H Key Exchange (Part II)
 ==========================
-<img src="images/d-h2.png" style="display: block;margin-left: auto;margin-right: auto;width: 70%;" title="Diffie-Hellman Key Exchange 2 of 2" alt="Diffie-Hellman Key Details" />
+<img src="images/d-h2.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 2 of 2" alt="Diffie-Hellman Key Details" />
 
 PKI, CAs, X.509, and Certificates
 =================================
@@ -166,8 +166,9 @@ Stolen from OWASP: [http://goo.gl/GjkGI](http://goo.gl/GjkGI)
 More Examples
 =============
 - Mixed content example site: [https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm](https://ie.microsoft.com/testdrive/browser/mixedcontent/assets/woodgrove.htm)
-- Rails >= 3.1 - set `config.force_ssl=true` in your environment configuration
-    - Forces all connections to use HTTPS
+- Rails >= 3.1
+    - Set `config.force_ssl=true` in your environment configuration
+        - Forces all connections to use HTTPS
     - Any cookies marked "Secure" will be transmitted over HTTPS only
     - Autoredirect to HTTPS, "Secure" cookies, and HSTS
 - Optionally set up HSTS
@@ -179,13 +180,18 @@ add_header Strict-Transport-Security max-age=31536000;
 
 Bad Press for CAs and TLS 2011-2013
 ===================================
+CA Issues:
+
 - [Comodo affiliate](http://blogs.comodo.com/it-security/data-security/the-recent-ra-compromise/) issues fraudulent certs for domains like `mail.google.com`, `login.yahoo.com`, `addons.mozilla.org`
 - [CA DigiNotar](http://googleonlinesecurity.blogspot.com/2011/08/update-on-attempted-man-in-middle.html) compromised subjecting users to MitM via fraudulent certs
-- [B.E.A.S.T.](https://threatpost.com/en_us/blogs/new-attack-breaks-confidentiality-model-ssl-allows-theft-encrypted-cookies-091911) decrypts part of PayPal encrypted data stream using a chosen plain-text attack against TLS 1.0 because it uses a predictable IV in CBC mode
-- [CRIME](https://threatpost.com/en_us/blogs/crime-attack-uses-compression-ratio-tls-requests-side-channel-hijack-secure-sessions-091312) uses an information leak in the compression ratio of TLS requests as a side channel to enable decryption of requests from client to server
-- Chrome 14/15 allowed certain types of redirects to display a valid HTTPS URL with content from a different site
 - [Adobe code signing certificates](https://blogs.adobe.com/asset/2012/09/inappropriate-use-of-adobe-code-signing-certificate.html) stolen and used to sign malicious software
 - [Bit9 code signing certificates](https://blog.bit9.com/2013/02/08/bit9-and-our-customers-security/) were stolen allowing malware to be signed as legitimate software
+
+TLS and Other Issues:
+
+- Chrome 14/15 allowed certain types of redirects to display a valid HTTPS URL with content from a different site
+- [B.E.A.S.T.](https://threatpost.com/en_us/blogs/new-attack-breaks-confidentiality-model-ssl-allows-theft-encrypted-cookies-091911) decrypts part of PayPal encrypted data stream using a chosen plain-text attack against TLS 1.0 because it uses a predictable IV in CBC mode
+- [CRIME](https://threatpost.com/en_us/blogs/crime-attack-uses-compression-ratio-tls-requests-side-channel-hijack-secure-sessions-091312) uses an information leak in the compression ratio of TLS requests as a side channel to enable decryption of requests from client to server
 - [Lucky Thirteen TLS and DTLS MitM](http://www.isg.rhul.ac.uk/tls/) discovered via an advanced padding oracle attack against HMAC-SHA1 MACs
 
 Weaknesses (Real and Perceived)
