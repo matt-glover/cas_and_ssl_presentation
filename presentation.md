@@ -66,6 +66,14 @@ Fscking TLS, how does it work?
 ==============================
 <img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
 
+D-H Key Exchange
+================
+<img src="images/d-h1.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 1 of 2" alt="Diffie-Hellman Key Exchange" />
+
+D-H Key Exchange (Part II)
+==========================
+<img src="images/d-h2.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 2 of 2" alt="Diffie-Hellman Key Details" />
+
 TLS (Part II)
 =============
 <img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height:180%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
@@ -105,14 +113,6 @@ RSA - Show (some of) Your Work!
     - `m` is the padded message as an integer
     - `c` is the encrypted text
 - Decrypt the data with the private key using: `m = c·d (mod n)`
-
-D-H Key Exchange
-================
-<img src="images/d-h1.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 1 of 2" alt="Diffie-Hellman Key Exchange" />
-
-D-H Key Exchange (Part II)
-==========================
-<img src="images/d-h2.png" style="display: block;margin-left: auto;margin-right: auto;height: 70%;" title="Diffie-Hellman Key Exchange 2 of 2" alt="Diffie-Hellman Key Details" />
 
 PKI, CAs, X.509, and Certificates
 =================================

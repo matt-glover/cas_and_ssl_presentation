@@ -29,3 +29,4 @@
 - VPN: OpenVPN uses TLS for key exchange
 - SIP: Encrypted on port 5061
 
+HSTS: HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTP connections (i.e. HTTP layered over TLS/SSL[1]). HSTS is an IETF standards track protocol and is specified in RFC 6797.
