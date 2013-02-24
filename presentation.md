@@ -90,7 +90,7 @@ Fscking TLS, how does it work?
 
 TLS (Part II)
 =============
-<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height:180%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
+<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
 
 TLS Handshake in Review
 =======================
