@@ -92,6 +92,10 @@ TLS (ClientHello)
 =================
 <img src="images/tls_breakout_1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation ClientHello" alt="TLS Handshake Negotiation ClientHello" />
 
+TLS (ServerHello)
+=================
+<img src="images/tls_breakout_2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation ServerHello" alt="TLS Handshake Negotiation ServerHello" />
+
 TLS (Post Negotiation)
 =============
 <img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post Negotiation" alt="TLS Handshake Post Negotiation" />
