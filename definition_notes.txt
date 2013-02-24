@@ -20,6 +20,12 @@
    binding between a public key and its owner based on a series of trust
   assertions. An alternative to the more hierarchical PKI/CA approach.
 
+Algorithm breakdown:
+- The key exchange algorithm is used to determine if and how the client and server will authenticate during the handshake.
+= The bulk encryption algorithm is used to encrypt the message stream. It also includes the key size and the lengths of explicit and implicit initialization vectors (cryptographic nonces).
+= The message authentication code (MAC) algorithm is used to create the message digest, a cryptographic hash of each block of the message stream.
+= The pseudorandom function (PRF) is used to create the master secret, a 48-byte secret shared between the two peers in the connection. The master secret is used as a source of entropy when creating session keys, such as the one used to create the MAC.
+
 
 - FTP: FTPS (explicit) over standard FTP via "AUTH TLS"
     - This is not the same as SFTP (file transfer via SSH)
