@@ -108,9 +108,13 @@ TLS (Post Negotiation)
 =============
 <img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post Negotiation" alt="TLS Handshake Post Negotiation" />
 
-TLS (Begin Encryption)
+TLS (Client Begins Encryption)
 =====================
-<img src="images/tls_breakout_4.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Encryption and HMAC Verification" alt="TLS Handshake Encryption and HMAC Verification" />
+<img src="images/tls_breakout_4.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Client Encryption and HMAC Verification" alt="TLS Client Encryption and HMAC Verification" />
+
+TLS (Server Begins Encryption)
+=====================
+<img src="images/tls_breakout_5.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Server Encryption and HMAC Verification" alt="TLS Server Encryption and HMAC Verification" />
 
 TLS Handshake in Review
 =======================
