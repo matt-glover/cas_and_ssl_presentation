@@ -1,0 +1,36 @@
+digraph G {
+	graph [
+		rankdir = "LR";
+		overlap = false;
+		splines = true;
+	];
+
+	node [
+		shape = "square";
+	];
+
+	edge [
+		style = "bold";
+		fontsize = "16";
+	];
+
+	"client" [
+		label = <<B><U>Client</U></B>>;
+		fillcolor = "#C0F0FF";
+		style = "filled";
+		fontsize = "24";
+		margin = "0.8";
+	];
+	
+	"server" [
+		label = <<B><U>Web Server</U></B>>;
+		fillcolor = "#FFCCCC";
+		style = "filled";
+		fontsize = "24";
+		margin = "0.4";
+	];
+
+	client -> server [label = "ChangeCipherSpec"]
+	client -> server [label = "Finished (Encrypted + HMAC)"]
+	server -> server [tailport = "s", headport = "s", label = "Decrypt \"Finished\" & Verify HMAC"]
+}
