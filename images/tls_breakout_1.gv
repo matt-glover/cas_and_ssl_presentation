@@ -1,0 +1,64 @@
+digraph G {
+	graph [
+		rankdir = "LR";
+	];
+
+	node [
+		shape = "record";
+		fontsize = "16";
+	];
+
+	edge [
+		style = "bold";
+		fontsize = "16";
+	];
+
+	subgraph cluster_client {
+		bgcolor = "#C0F0FF";
+		label = <<B><U>Client</U></B>>;
+		fontsize = "24";
+		"tls" [
+			label = "TLS versions|<selected>3.2 (TLS 1.1)|3.1 (TLS 1.0)|3.0 (SSL 3.0)";
+		];
+
+		"cipher" [
+			label = "Cipher suites|<s1>ECDH, ECDSA, AES, SHA|<s2>RSA, ECDSA, RC4, MD5|<s3>SRP, DSA, IDEA, MD4";
+		];
+
+		"compression" [
+			label = "Compression methods|<selected>DEFLATE";
+		];
+
+		"random" [
+			label = "Pseudorandom number|<selected>123456";
+		];
+	};
+
+	subgraph cluster_server {
+		bgcolor = "#FFCCCC";
+		label = <<B><U>Web Server</U></B>>;
+		fontsize = "24";
+		"server_tls" [
+			label = "<selected>TLS versions|3.1 (TLS 1.0)|3.2 (TLS 1.1)|3.3 (TLS 1.2)";
+		];
+
+		"server_cipher" [
+			label = "<selected>Cipher suites|RSA, ECDSA, RC4, MD5|SRP, DSA, IDEA, SHA|ECDH, RSA, AES, SHA|DH, ECDSA, AES, SHA";
+		];
+
+		"server_compression" [
+			label = "<selected>Compression methods|";
+		];
+
+		"server_random" [
+			label = "<selected>Pseudorandom number|908976";
+		];
+	};
+
+	tls:selected -> server_tls:selected [label = "ClientHello"];
+	cipher:s1 -> server_cipher:selected;
+	cipher:s2 -> server_cipher:selected;
+	cipher:s3 -> server_cipher:selected;
+	compression:selected -> server_compression:selected;
+	random:selected -> server_random:selected;
+}
