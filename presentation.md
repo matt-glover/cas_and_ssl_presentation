@@ -96,6 +96,14 @@ TLS (ServerHello)
 =================
 <img src="images/tls_breakout_2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation ServerHello" alt="TLS Handshake Negotiation ServerHello" />
 
+TLS (Certificate)
+=====================
+<img src="images/tls_breakout_3.png" style="display: block;margin-left: auto;margin-right: auto;width: 100%;" title="TLS Handshake Negotiation Certificate" alt="TLS Handshake Negotiation Certificate" />
+
+TLS (Negotiation Wrap-up)
+=========================
+<img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
+
 TLS (Post Negotiation)
 =============
 <img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post Negotiation" alt="TLS Handshake Post Negotiation" />
