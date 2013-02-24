@@ -88,9 +88,13 @@ Fscking TLS, how does it work?
 ==============================
 <img src="images/tls_handshake1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation" alt="TLS Handshake Negotiation" />
 
-TLS (Part II)
+TLS (ClientHello)
+=================
+<img src="images/tls_breakout_1.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Negotiation ClientHello" alt="TLS Handshake Negotiation ClientHello" />
+
+TLS (Post Negotiation)
 =============
-<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post-Negotiation" alt="TLS Handshake Post-Negotiation" />
+<img src="images/tls_handshake2.png" style="display: block;margin-left: auto;margin-right: auto;height: 80%;" title="TLS Handshake Post Negotiation" alt="TLS Handshake Post Negotiation" />
 
 TLS Handshake in Review
 =======================
