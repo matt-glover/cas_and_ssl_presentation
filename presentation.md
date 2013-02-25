@@ -162,7 +162,7 @@ D-H Key Exchange (Part II)
 
 Wrong Certificate Example
 =========================
-Dave wants to log on to his favorite Twilight(TM) fan site:
+Dave wants to log on to his favorite Twilight&#8482; fan site:
 [http://www.fairiesvampires.com/main/authorization/signIn](http://www.fairiesvampires.com/main/authorization/signIn)
 
 But he does not want his credentials to be transmitted in the
